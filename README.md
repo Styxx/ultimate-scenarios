@@ -4,6 +4,7 @@
 * Search bar functionality
   * Attach to top right
   * CSS accordingly
+    * See Google Fonts top right for example.
   * JS to hide/show specific scenarios
 * Underscore.js templating
   * Import underscore
@@ -14,8 +15,7 @@
     * For scenarios
     * Page layout?
   * Scrounge observer forums for more ideas.
-* About page
-* Contact page
+* About/Contact page
 * Hosting where?
 * Domain name?
 
