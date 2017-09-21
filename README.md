@@ -1,6 +1,8 @@
 # Ultimate Scenarios
 
 ## To-do
+* Responsive CSS
+  * Increase text-size on mobile devices
 * Search bar functionality
   * Attach to top right
   * CSS accordingly
@@ -15,7 +17,6 @@
     * For scenarios
     * Page layout?
   * Scrounge observer forums for more ideas.
-* About/Contact page
 * Hosting where?
 * Domain name?
 
