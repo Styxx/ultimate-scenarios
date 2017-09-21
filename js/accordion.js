@@ -8,7 +8,7 @@ for (i = 0; i < acc.length; i++) {
     if (panel.style.maxHeight){
       panel.style.maxHeight = null;
     } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
+      panel.style.maxHeight = panel.scrollHeight + 10 + "px"; // Extra 10 accounts for scroll bar
     } 
   }
 }
