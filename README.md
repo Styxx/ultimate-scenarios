@@ -8,10 +8,15 @@
   * CSS accordingly
     * See Google Fonts top right for example.
   * JS to hide/show specific scenarios
-* Underscore.js templating
-  * Import underscore
-  * Page data JSON architecture
-  * Underscore script template
+* ~~Underscore.js templating~~
+  * ~~Import underscore~~
+  * ~~Page data JSON architecture~~
+  * ~~Underscore script template~~
+* Rules JSON Data Structure
+  * Full json object of all of the rules
+  * Used to reference in _US template so "section" and "text" are not necessary in scenarioList JSON
+     * Only need to reference by index #
+  * Dictonary DS?
 * Add more scenarios!
   * Categorization?
     * For scenarios
@@ -26,5 +31,6 @@
 * Rules page
   * Covers 11th edition rules with less obtrusive tooltips, and rules/definition hot-tooltips
   * Uses all exact same USAU verbiage.
+  * Can utilize Rules JSON DS?
 ---
 **Oh hey, it's my [Twitter](https://www.twitter.com/Styxx__).**

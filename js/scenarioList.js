@@ -139,6 +139,45 @@ var scenarioList = [
                 text: "Since a strip is defined as an offensive player <strong><em>losing possession</em></strong> of the disc as a result of contact from the defensive player, and the foul is uncontested, it is a goal."
             }
         ]
+    },
+    {
+        title: "I throw the disc. It sails high, going out, but then curves back in-bounds. Then it hits a tree hanging over the field and the offense catches it in the endzone. Is it a score?",
+        answer: "No, it's a turnover. Defense checks the disc in at the nearest spot on the playing field proper under where it hit the tree.",
+        tags: "bounds",
+        panels: [
+            {
+                type: "Procedure",
+                text: "The new thrower must establish a pivot at the spot and then ground-check the disc before putting it into play.",
+            },
+            {
+                type: "Rules",
+                rules: [
+                    {
+                        index: "IX.B",
+                        section: "In- and Out-of-bounds",
+                        text: "The out-of-bounds area consists of the ground which is not in-bounds and everything in contact (direct or indirect) with it except for players. Any non-players other than observers are considered part of the out-of-bounds area."
+                    },
+                    {
+                        index: "IX.H.4",
+                        section: "In- and Out-of-bounds",
+                        text: "To continue play after the disc becomes out-of-bounds, a member of the team gaining possession of the disc must carry it to, and put it into play at, the spot on the playing field proper nearest to where the disc became out-of-bounds due to contact with the out-of-bounds area or a player while any part of the disc was inside the perimeter line."
+                    },
+                    {
+                        index: "IX.I",
+                        section: "In- and Out-of-bounds",
+                        text: "Events occurring after the disc becomes out-of-bounds do not affect where it is put into play."
+                    }
+                ]
+            },
+            {
+                type: "Explanation",
+                text: "The disc is considered in-bounds until it hits the tree, which is considered as out-of-bounds, <em>even though the part of tree that the disc hit is hanging over the in-bounds area</em>."
+            },
+            {
+                type: "Explanation",
+                text: " Because the disc hitting the tree is the most recent event that occurred before the disc was considered out-of-bounds, it is put into play at the nearest spot on the playing field proper where the disc contacted the tree."
+            }
+        ]
     }
 ];
 

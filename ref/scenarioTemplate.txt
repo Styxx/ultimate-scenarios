@@ -1,25 +1,30 @@
 {
-    title: "test2",
-    answer: "answer2",
-    tags: "tagA tagB",
-    rules: [
-        {
-            index: "III.F.12",
-            text: "This is <b> more example</b> rule text."
-        },
-        {
-            index: "Q.6.9",
-            text: "Even more example."
-        }
-    ],
+    title: "title",
+    answer: "answer",
+    tags: "tag1 tag2",
     panels: [
         {
-            type: "bleh",
-            text: "bleh type stuff yo."
+            type: "Procedure",
+            text: "procedureText",
         },
         {
-            type: "384d",
-            text: "384d type stuff yo."
+            type: "Rules",
+            rules: [
+                {
+                    index: "rule1",
+                    section: "section1",
+                    text: "ruleText1"
+                },
+                {
+                    index: "rule2",
+                    section: "section2",
+                    text: "ruleText2"
+                }
+            ]
+        },
+        {
+            type: "Explanation",
+            text: "explanationText"
         }
     ]
 }

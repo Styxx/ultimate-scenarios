@@ -88,3 +88,52 @@ body {
 .explanation {
     margin: 10px 0;
 }
+
+.search-container {
+    width: 200px;
+    vertical-align: middle;
+    white-space: nowrap;
+    position: fixed;
+    top: 1em;
+    right: 1em;
+}
+
+.search-container #search {
+  width: 50px;
+  height: 50px;
+  border: none;
+  font-size: 125%;
+  float: right;
+  transition: width .55s ease;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  background-color: transparent;
+}
+
+.search-container #search::-webkit-input-placeholder {
+   color: #444;
+}
+.search-container #search:-moz-placeholder {
+   color: #444;
+}
+.search-container #search::-moz-placeholder {
+   color: #444;
+}
+.search-container #search:-ms-input-placeholder {
+   color: #444;
+}
+
+.search-container .icon {
+  float: right;
+  margin-top: 12px;
+  color: #444;
+}
+
+.search-container:hover #search, .search-container #search:focus, .search-container #search:active {
+    width: 174px;
+    border-bottom: 4px solid #444;
+}
+
+.search-container:hover .icon {
+    color: #444;
+}
