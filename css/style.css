@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:400,800|Roboto|Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,800|Roboto|Montserrat');
 
 h1 {
 	margin-bottom: 20px;
@@ -43,6 +43,10 @@ body {
     content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 
+.title {
+	width: 96%;
+}
+
 .panel {
     padding: 0 18px;
     background-color: white;
@@ -52,7 +56,7 @@ body {
     margin-bottom: 0;
 }
 
-.explanation{
+.explanationText{
 	margin: 5px 0 5px 5px;
 }
 
@@ -81,7 +85,6 @@ body {
 	margin: 15px 0 15px 0;
 }
 
-
-.title {
-	width: 96%;
+.explanation {
+    margin: 10px 0;
 }

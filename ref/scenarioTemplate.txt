@@ -1,0 +1,25 @@
+{
+    title: "test2",
+    answer: "answer2",
+    tags: "tagA tagB",
+    rules: [
+        {
+            index: "III.F.12",
+            text: "This is <b> more example</b> rule text."
+        },
+        {
+            index: "Q.6.9",
+            text: "Even more example."
+        }
+    ],
+    panels: [
+        {
+            type: "bleh",
+            text: "bleh type stuff yo."
+        },
+        {
+            type: "384d",
+            text: "384d type stuff yo."
+        }
+    ]
+}

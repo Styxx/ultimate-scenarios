@@ -1,84 +1,57 @@
 <!DOCTYPE html>
 <html lang="en-us">
+
 <head>
 	<meta charset="utf-8">
 	<title>Ultimate Scenarios</title>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link href="css/style.css" rel="stylesheet">
-	
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+	<script src="js/scenarioList.js"></script>
+	<script src="js/home.js"></script>
 </head>
+
 <body>
 	<h1>Ultimate Scenarios</h1>
-	
-	<div class="scenario" data-tags="bounds">
-		<button class="accordion"><span class="title">If a player jumps from in-bounds, catches the disc, and touches the disc in the endzone but the rest of their body is out-of-bounds, is it a goal or not a goal? The player has possession through all ground contact.</span></button>
-		<div class="panel">
-			<div class="explanation">
-				<p class="answer">It's a goal.</p>	
-				<div class="rules">
-					<p>Rule II.O.3: A disc in a player’s possession is considered part of that player.</p>
-					<p>Rule XI.A.1: To be considered in the end zone after gaining possession of the disc in accordance with II.O.2 and XV.E., the player’s first point of ground contact must be completely in the endzone.</p>
+
+
+	<div id="ScenarioBook">
+	</div>
+
+	<script type="underscore/template" id="_scenarioTemplate">
+		<div id="scenario<%= index %>" class="scenario" data-tags="<%= scenario.tags %>">
+			<button class="accordion"><span class="title"><%= scenario.title %></span></button>
+			<div class="panel">
+				<div class="explanationText">
+					<p class="answer"><%= scenario.answer %></p>
+					<% if (scenario.panels.length) {
+						_.each(scenario.panels, function(panel) { %>
+							<% if (panel.type == "Procedure") { %>
+								<p class="procedure"><%= panel.text %></p>
+							<% } else if (panel.type == "Explanation") { %>
+								<p class="explanation"><%= panel.text %></p>
+							<% } else if (panel.type == "Rules") { %>
+								<div class="rules">
+									<% _.each(panel.rules, function(rule){ %>
+										<p><strong><u>Rule <%= rule.index %>:</u> <em><%= rule.section %></em></strong>
+										<br>
+										<%= rule.text %>
+										</p>
+									<% }); %>
+								</div>
+							<% } %>
+						<% }); %>
+					<% } %>
 				</div>
 			</div>
 		</div>
-	</div>
-	
-	<div class="scenario" data-tags="receiving fouls uncontested">
-		<button class="accordion"><span class="title">I (offensive receiver) was trying to catch the disc and my defender fouled me.
-		I call foul. My defender doesn’t contest. Where does the disc go?</span></button>
-		<div class="panel">
-			<div class="explanation">
-				<p class="answer">You gain possession of the disc.</p>
-				<div class="rules">
-					<p>Rule H.3.b.2: If XVI.C.2.b.1 of the continuation rule applies: if the call is uncontested, the fouled player gains possession at the spot on the playing field closest to the spot of the infraction. If the foul is contested, the disc reverts to the thrower.</p>
-					<p>Rule XVI.C.2.b.1: For calls made by a non-thrower: If the team that committed the infraction has possession: If the infraction affected the play (XVI.C.3), play stops and the disc reverts to the thrower unless the specific rule says otherwise.</p>
-				</div>
-				<p>This is more content below the section.</p>
-				<p>This is more content below the section.</p>
-				<p>This is more content below the section.</p>
-				<p>This is more content below the section.</p>
-				<p>This is more content below the section.</p>
-				<p>This is more content below the section.</p>
-				<p>This is more content below the section.</p>
-				<p>This is more content below the section.</p>
-			</div>
-		</div>
-	</div>
-	
-	<div class="scenario" data-tags="receiving fouls uncontested endzone">
-		<button class="accordion">I (offensive receiver) was trying to catch the disc in the endzone and my defender fouls me. I call foul. My defender doesn’t contest. Where does the disc go?</button>
-		<div class="panel">
-			<div class="explanation">
-				<p class="answer">You gain possession of the disc at the endzone line.</p>
-				<p class="procedure">When the nearest defender acknowledges readiness, tap the ground live. You have 20 seconds to pick up the disc and tap it into play at the nearest point at the front of the endzone from where the disc lies.</p>	
-				<div class="rules">
-					<p>Rule</p>
-				</div>
-				
-				
-				<div class="panel-footer">Oh hey, an example footer for some extra notes.</div>
-				<div class="panel-footer">Oh hey, an example footer for some extra notes.</div>
-				<div class="panel-footer">Oh hey, an example footer for some extra notes.</div>
-				<div class="panel-footer">Oh hey, an example footer for some extra notes.</div>
-			</div>
-		</div>
-	</div>
-	
-	<div class="scenario" data-tags="receiving fouls strip uncontested endzone">
-		<button class="accordion">I (offensive receiver) catch the disc the endzone and my defender strips the disc from my hand. I call strip. My defender doesn’t contest. Where does the disc go?</button>
-		<div class="panel">
-			<div class="explanation">
-				<p class="answer">It's a goal.</p>
-				<div class="rules">
-					<p>Rule</p>
-				</div>
-			</div>
-		</div>
-	</div>
+	</script>
 
 </body>
 
-<script type="text/javascript" src="js/accordion.js"></script>
+
+
 </html>
