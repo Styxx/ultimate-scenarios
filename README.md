@@ -3,10 +3,11 @@
 ## To-do
 * Responsive CSS
   * Increase text-size on mobile devices
+  * Handle search bar on tiny screens
 * Search bar functionality
-  * Attach to top right
-  * CSS accordingly
-    * See Google Fonts top right for example.
+  * ~~Attach to top right~~
+  * ~~CSS accordingly~~
+    * ~~See Google Fonts top right for example.~~
   * JS to hide/show specific scenarios
 * ~~Underscore.js templating~~
   * ~~Import underscore~~
