@@ -78,7 +78,7 @@ var scenarioList = [
         panels: [
             {
                 type: "Procedure",
-                text: "When the nearest defender acknowledges readiness, tap the ground live. You have 20 seconds to pick up the disc and tap it into play at the nearest point at the front of the endzone from where the disc lies.",
+                text: "Pick up the disc and walk to the the nearest point at the front of the endzone from where the disc lies. The defender will check it into play.",
             },
             {
                 type: "Rules",

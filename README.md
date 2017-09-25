@@ -8,7 +8,8 @@
   * ~~Attach to top right~~
   * ~~CSS accordingly~~
     * ~~See Google Fonts top right for example.~~
-  * JS to hide/show specific scenarios
+  * ~~JS to hide/show specific scenarios~~
+  * CSS animation for list showing/hiding scenarios?
 * ~~Underscore.js templating~~
   * ~~Import underscore~~
   * ~~Page data JSON architecture~~
