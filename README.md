@@ -10,6 +10,7 @@
     * ~~See Google Fonts top right for example.~~
   * ~~JS to hide/show specific scenarios~~
   * CSS animation for list showing/hiding scenarios?
+  * Include content of scenario in searchable js
 * ~~Underscore.js templating~~
   * ~~Import underscore~~
   * ~~Page data JSON architecture~~
