@@ -1,62 +1,60 @@
 <!DOCTYPE html>
 <html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<title>Ultimate Scenarios</title>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+		<link href="css/style.css" rel="stylesheet">
 
-<head>
-	<meta charset="utf-8">
-	<title>Ultimate Scenarios</title>
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-	<link href="css/style.css" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+		<script src="js/scenarioList.js"></script>
+		<script src="js/home.js"></script>
+		<script src="js/search.js"></script>
+	</head>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
-	<script src="js/scenarioList.js"></script>
-	<script src="js/home.js"></script>
-	<script src="js/search.js"></script>
-</head>
+	<body>
+		<h1>Ultimate Scenarios</h1>
 
-<body>
-	<h1>Ultimate Scenarios</h1>
-	<div class="search-container">
-		<span class="icon"><i class="fa fa-2x fa-search"></i></span>
-	    <input type="search" id="search"/>
-	</div>
+		<div class="search-container">
+			<a id="aboutLink" href="about.html"><span class="about icon"><i class="far fa-question-circle"></i></span></a>
+			<span class="icon"><i class="fa fa-2x fa-search"></i></span>
+		    <input type="search" id="search"/>
+		</div>
 
-	<div id="ScenarioBook">
-	</div>
+		<div id="ScenarioBook">
+		</div>
 
-	<script type="underscore/template" id="_scenarioTemplate">
-		<div id="scenario<%= index %>" class="scenario" data-tags="<%= scenario.tags %>">
-			<button class="accordion"><span class="title"><%= scenario.title %></span></button>
-			<div class="panel">
-				<div class="explanationText">
-					<p class="answer"><%= scenario.answer %></p>
-					<% if (scenario.panels.length) {
-						_.each(scenario.panels, function(panel) { %>
-							<% if (panel.type == "Procedure") { %>
-								<p class="procedure"><%= panel.text %></p>
-							<% } else if (panel.type == "Explanation") { %>
-								<p class="explanation"><%= panel.text %></p>
-							<% } else if (panel.type == "Rules") { %>
-								<div class="rules">
-									<% _.each(panel.rules, function(rule){ %>
-										<p><strong><u>Rule <%= rule.index %>:</u> <em><%= rule.section %></em></strong>
-										<br>
-										<%= rule.text %>
-										</p>
-									<% }); %>
-								</div>
-							<% } %>
-						<% }); %>
-					<% } %>
+		<script type="underscore/template" id="_scenarioTemplate">
+			<div id="scenario<%= index %>" class="scenario" data-tags="<%= scenario.tags %>">
+				<button class="accordion"><span class="title"><%= scenario.title %></span></button>
+				<div class="panel">
+					<div class="explanationText">
+						<p class="answer"><%= scenario.answer %></p>
+						<% if (scenario.panels.length) {
+							_.each(scenario.panels, function(panel) { %>
+								<% if (panel.type == "Procedure") { %>
+									<p class="procedure"><%= panel.text %></p>
+								<% } else if (panel.type == "Explanation") { %>
+									<p class="explanation"><%= panel.text %></p>
+								<% } else if (panel.type == "Rules") { %>
+									<div class="rules">
+										<% _.each(panel.rules, function(rule){ %>
+											<p><strong><u>Rule <%= rule.index %>:</u> <em><%= rule.section %></em></strong>
+											<br>
+											<%= rule.text %>
+											</p>
+										<% }); %>
+									</div>
+								<% } %>
+							<% }); %>
+						<% } %>
+					</div>
 				</div>
 			</div>
-		</div>
-	</script>
+		</script>
 
-</body>
-
-
-
+	</body>
 </html>

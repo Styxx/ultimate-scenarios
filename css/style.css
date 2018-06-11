@@ -90,7 +90,7 @@ body {
 }
 
 .search-container {
-    width: 200px;
+    width: 500px;
     vertical-align: middle;
     white-space: nowrap;
     position: fixed;
@@ -130,10 +130,14 @@ body {
 }
 
 .search-container:hover #search, .search-container #search:focus, .search-container #search:active, .search-container.active #search {
-    width: 174px;
+    width: 200px;
     border-bottom: 4px solid #444;
 }
 
 .search-container:hover .icon {
     color: #444;
+}
+
+span.about.icon {
+    padding-left: 1.5em;
 }

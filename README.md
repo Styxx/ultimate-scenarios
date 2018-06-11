@@ -1,4 +1,10 @@
 # Ultimate Scenarios
+##### Rules are hard. Scenarios are easier.
+
+* Coded with **[Atom](https://atom.io)** and **[AWS Cloud9](https://aws.amazon.com/cloud9/?origin=c9io)**
+* Templating with **[Underscore.js](http://underscorejs.org/)**
+* Hosted on an Amazon AWS S3 Bucket
+
 
 ## To-do
 * Responsive CSS
@@ -17,7 +23,7 @@
   * ~~Underscore script template~~
 * Rules JSON Data Structure
   * Full json object of all of the rules
-  * Used to reference in _US template so "section" and "text" are not necessary in scenarioList JSON
+  * Used to reference in \_US template so "section" and "text" are not necessary in scenarioList JSON
      * Only need to reference by index #
   * Dictonary DS?
 * Add more scenarios!
@@ -25,8 +31,8 @@
     * For scenarios
     * Page layout?
   * Scrounge observer forums for more ideas.
-* Hosting where?
-* Domain name?
+* ~~Hosting where?~~ Amazon AWS S3
+* ~~Domain name?~~ ultimate-scenarios.com
 * Build your own scenario!
   * Multiple choice questions branches out into trees covering each scenario
   * \[Thrower|Marker|Cutter|Handler\] called \[foul|stall|travel|(dynamic based on answer 1)\], \[before|after\] the throw, etc.
