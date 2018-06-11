@@ -16,6 +16,7 @@
     * Page layout?
   * Scrounge observer forums for more ideas.
 * SSL Cert on S3 Bucket - LetsEncrypt
+* Add github webhook to automatically update site on push
 * Search bar functionality
   * ~~Attach to top right~~
   * ~~CSS accordingly~~
