@@ -130,7 +130,7 @@ body {
 }
 
 .search-container:hover #search, .search-container #search:focus, .search-container #search:active, .search-container.active #search {
-    width: 200px;
+    width: 400px;
     border-bottom: 4px solid #444;
 }
 
