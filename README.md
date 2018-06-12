@@ -3,7 +3,7 @@
 
 * Coded with **[Atom](https://atom.io)** and **[AWS Cloud9](https://aws.amazon.com/cloud9/?origin=c9io)**
 * Templating with **[Underscore.js](http://underscorejs.org/)**
-* Hosted on an Amazon AWS S3 Bucket at **[ultimate-scenarios.com](ultimate-scenarios.com)**
+* Hosted on an Amazon AWS S3 Bucket at **[ultimate-scenarios.com](http://ultimate-scenarios.com)**
 
 
 ## To-do
