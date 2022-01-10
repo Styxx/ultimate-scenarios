@@ -1,7 +1,7 @@
 # Ultimate Scenarios
 ##### Rules are hard. Scenarios are easier.
 
-* Coded with **[Atom](https://atom.io)** and **[AWS Cloud9](https://aws.amazon.com/cloud9/?origin=c9io)**
+* Coded with **[Atom](https://atom.io)**
 * Templating with **[Underscore.js](http://underscorejs.org/)**
 * Hosted on an Amazon AWS S3 Bucket at **[ultimate-scenarios.com](http://ultimate-scenarios.com)**
 
@@ -10,12 +10,14 @@
 * **Responsive CSS**
   * **Increase text-size on mobile devices**
   * **Handle search bar on tiny screens**
+* Update rulebook and scenarios to latest USAU Edition.
+* Create and update tag list.
 * Add more scenarios!
   * Categorization?
     * For scenarios
     * Page layout?
   * Scrounge observer forums for more ideas.
-* SSL Cert on S3 Bucket - LetsEncrypt
+* SSL Cert on S3 Bucket - Amazon Cloudfront
 * Add github webhook to automatically update site on push
 * Search bar functionality
   * ~~Attach to top right~~
@@ -35,7 +37,7 @@
   * \[Thrower|Marker|Cutter|Handler\] called \[foul|stall|travel|(dynamic based on answer 1)\], \[before|after\] the throw, etc.
   * Once scenario is completed, shows answer.
 * Rules page
-  * Covers 11th edition rules with less obtrusive tooltips, and rules/definition hot-tooltips
+  * Covers 12th edition rules with less obtrusive tooltips, and rules/definition hot-tooltips
   * Uses all exact same USAU verbiage.
   * Can utilize Rules JSON DS?
 * ~~Underscore.js templating~~
